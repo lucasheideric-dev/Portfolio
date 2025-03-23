@@ -1,0 +1,23 @@
+[0;1;32m●[0m docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Sat 2025-03-22 19:12:08 UTC; 696ms ago
+TriggeredBy: [0;1;32m●[0m docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 59917 (dockerd)
+      Tasks: 28
+     Memory: 68.7M
+     CGroup: /system.slice/docker.service
+             ├─59917 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+             ├─60083 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 3000 -container-ip 172.18.0.2 -container-port 4321
+             └─60095 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 3000 -container-ip 172.18.0.2 -container-port 4321
+
+Mar 22 19:12:05 portfolio dockerd[59917]: time="2025-03-22T19:12:05.960346884Z" level=info msg="detected 127.0.0.53 nameserver, assuming systemd-resolved, so using resolv.conf: /run/systemd/resolve/resolv.conf"
+Mar 22 19:12:06 portfolio dockerd[59917]: time="2025-03-22T19:12:06.152892378Z" level=info msg="[graphdriver] using prior storage driver: overlay2"
+Mar 22 19:12:06 portfolio dockerd[59917]: time="2025-03-22T19:12:06.354147577Z" level=info msg="Loading containers: start."
+Mar 22 19:12:07 portfolio dockerd[59917]: time="2025-03-22T19:12:07.082551877Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Mar 22 19:12:07 portfolio dockerd[59917]: time="2025-03-22T19:12:07.447394740Z" level=info msg="No non-localhost DNS nameservers are left in resolv.conf. Using default external servers"
+Mar 22 19:12:08 portfolio dockerd[59917]: time="2025-03-22T19:12:08.452863172Z" level=info msg="Loading containers: done."
+Mar 22 19:12:08 portfolio dockerd[59917]: time="2025-03-22T19:12:08.660662802Z" level=info msg="Docker daemon" commit="26.1.3-0ubuntu1~20.04.1" containerd-snapshotter=false storage-driver=overlay2 version=26.1.3
+Mar 22 19:12:08 portfolio dockerd[59917]: time="2025-03-22T19:12:08.728653771Z" level=info msg="Daemon has completed initialization"
+Mar 22 19:12:08 portfolio dockerd[59917]: time="2025-03-22T19:12:08.932670267Z" level=info msg="API listen on /run/docker.sock"
+Mar 22 19:12:08 portfolio systemd[1]: Started Docker Application Container Engine.
