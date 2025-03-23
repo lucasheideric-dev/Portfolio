@@ -5,20 +5,33 @@ import { GithubIcon, LinkedinIcon, MailIcon, FileText } from "lucide-react";
 ---
 
 <!-- Hero Section -->
-<section class="container mx-auto px-6 py-20 md:py-32">
+<section class="w-full px-6 py-20 md:py-32">
   <div class="flex flex-col items-center text-center space-y-8">
-    <!-- Foto -->
     <img
       src="lucasheideric.jpg"
       alt="Lucas Heideric"
-      class="w-40 h-40 shadow-2xl rounded-full object-cover mb-6 transition-transform transform hover:scale-105"
+      class="w-52 h-52 shadow-2xl rounded-full mb-6 border-5 border-[#00b290] hover:scale-105 transition-transform duration-300"
     />
 
-    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
-      Olá, eu sou <span>Lucas Heideric</span> 👋
+    <h1
+      class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 leading-tight text-center sm:text-left"
+    >
+      Olá, eu sou
+      <span class="text-[#00b290] transition-colors duration-300">
+        Lucas Heideric
+      </span>
+      <span class="wave-animation">
+        <div class="w-10 h-10 sm:w-16 sm:h-16">
+          <img
+            src="tchau.png"
+            alt="Olá Devs."
+            class="w-full h-full object-contain transition-transform transform hover:scale-110 block sm:inline-block"
+          />
+        </div>
+      </span>
     </h1>
 
-    <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
+    <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxe">
       Engenheiro de software e programador full-stack, focado em desenvolver
       soluções eficientes e de alta qualidade. Especializado em tecnologias
       modernas e criação de experiências digitais funcionais.
@@ -27,9 +40,8 @@ import { GithubIcon, LinkedinIcon, MailIcon, FileText } from "lucide-react";
     <div class="flex gap-4 justify-center mb-12">
       <a href="/curriculo.pdf" download>
         <Button
-          variant="default"
           size="lg"
-          className="px-8 py-3 shadow-md transform hover:scale-105 transition-all duration-300"
+          className="px-8 py-3 shadow-md transform hover:scale-105 transition-all duration-300 bg-[#00b290] hover:bg-[#00b290]"
         >
           <FileText className="mr-2 h-5 w-5" />
           Obter Currículo

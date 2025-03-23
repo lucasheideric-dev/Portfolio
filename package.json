@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "npx astro build",
-    "preview": "astro preview --port 4321 --host"
+    "preview": "astro preview --port 4321 --host",
     "astro": "astro"
   },
   "dependencies": {
@@ -25,7 +25,8 @@
     "slick-carousel": "^1.8.1",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.14",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "tsparticles": "^3.8.1"
   },
   "devDependencies": {
     "@types/react": "^19.0.10",
