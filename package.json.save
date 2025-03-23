@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "npx astro build",
-    "preview": "astro preview --port 4321 --host"
+    "preview": "astro preview --,
     "astro": "astro"
   },
   "dependencies": {

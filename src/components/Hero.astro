@@ -1,0 +1,68 @@
+---
+import "../styles/global.css";
+import { Button } from "../components/ui/button";
+import { GithubIcon, LinkedinIcon, MailIcon, FileText } from "lucide-react";
+---
+
+<!-- Hero Section -->
+<section class="container mx-auto px-6 py-20 md:py-32">
+  <div class="flex flex-col items-center text-center space-y-8">
+    <!-- Foto -->
+    <img
+      src="lucasheideric.jpg"
+      alt="Lucas Heideric"
+      class="w-40 h-40 shadow-2xl rounded-full object-cover mb-6 transition-transform transform hover:scale-105"
+    />
+
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+      Olá, eu sou <span>Lucas Heideric</span> 👋
+    </h1>
+
+    <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
+      Engenheiro de software e programador full-stack, focado em desenvolver
+      soluções eficientes e de alta qualidade. Especializado em tecnologias
+      modernas e criação de experiências digitais funcionais.
+    </p>
+
+    <div class="flex gap-4 justify-center mb-12">
+      <a href="/curriculo.pdf" download>
+        <Button
+          variant="default"
+          size="lg"
+          className="px-8 py-3 shadow-md transform hover:scale-105 transition-all duration-300"
+        >
+          <FileText className="mr-2 h-5 w-5" />
+          Obter Currículo
+        </Button>
+      </a>
+
+      <a href="mailto:lucasheideric.dev@gmail.com">
+        <Button
+          variant="outline"
+          size="lg"
+          className="px-8 py-3 border-gray-300 transform hover:scale-105 transition-all duration-300"
+        >
+          <MailIcon className="mr-2 h-5 w-5" />
+          Contate-me
+        </Button>
+      </a>
+    </div>
+
+    <div class="flex gap-6 justify-center">
+      <a
+        href="https://github.com/lucasheideric-dev"
+        target="_blank"
+        class="text-gray-600 hover:text-gray-800 transition-colors transform hover:scale-110"
+      >
+        <GithubIcon className="h-8 w-8" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/lucasheideric/"
+        target="_blank"
+        class="text-gray-600 hover:text-gray-800 transition-colors transform hover:scale-110"
+      >
+        <LinkedinIcon className="h-8 w-8" />
+      </a>
+    </div>
+  </div>
+</section>
