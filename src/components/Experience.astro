@@ -1,0 +1,278 @@
+---
+import "../styles/global.css";
+import { Briefcase, GraduationCap, Award } from "lucide-react";
+---
+
+<section class="py-20 bg-muted/50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-12 text-center">Jornada Profissional</h2>
+
+    <div class="mb-16">
+      <div class="flex items-center gap-2 mb-8">
+        <Briefcase className="h-6 w-6 text-primary" />
+        <h3 class="text-2xl font-semibold">Experiência Profissional</h3>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <!-- Adicionado grid -->
+        <div class="bg-card rounded-lg p-6 shadow-md">
+          <div class="flex items-center space-x-4 mb-2">
+            <img
+              src="infradesk.jpg"
+              alt="Logo da InfraDesk"
+              class="h-8 w-auto rounded-full"
+            />
+            <h4 class="text-xl font-semibold">Software Engineer Full Stack</h4>
+          </div>
+          <p class="text-muted-foreground">
+            InfraDesk Service Desk • 01/2023 - Atualmente
+          </p>
+          <ul
+            class="mt-4 space-y-2 list-disc list-inside text-muted-foreground"
+          >
+            <li>
+              Contribuí no desenvolvimento e aprimoramento de soluções
+              full-stack utilizando PHP, CakePHP, React e PostgreSQL
+            </li>
+            <li>
+              Colaborei para garantir alta qualidade de código, implementando
+              testes unitários e automatizados, seguindo melhores práticas de
+              controle de versão
+            </li>
+            <li>
+              Participei do uso de AWS e S3, aprendendo e contribuindo para a
+              construção de uma infraestrutura escalável e eficiente para
+              armazenamento e processamento de dados
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-card rounded-lg p-6 shadow-md">
+          <div class="flex items-center space-x-4 mb-2">
+            <img
+              src="countpay.png"
+              alt="Logo Bandeirante Supermercados Brasil"
+              class="h-8 w-auto rounded-full"
+            />
+            <h4 class="text-xl font-semibold">
+              Fundador e Desenvolvedor Full Stack
+            </h4>
+          </div>
+          <p class="text-muted-foreground">
+            Countpay Gestão Financeira Pessoal • 07/2018 - 12/2022
+          </p>
+          <ul
+            class="mt-4 space-y-2 list-disc list-inside text-muted-foreground"
+          >
+            <li>
+              Desenvolvimento full stack do Countpay, desde a concepção até a
+              manutenção contínua, utilizando tecnologias como PHP, CakePHP,
+              React, React Native e MySQL
+            </li>
+            <li>
+              Implantação e administração da infraestrutura em Linux, incluindo
+              o uso de Docker e Oracle Cloud para garantir escalabilidade e
+              segurança
+            </li>
+            <li>
+              Criação de uma ferramenta intuitiva de gestão financeira pessoal,
+              focada no controle de receitas, despesas e metas para melhorar a
+              saúde financeira dos usuários
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-card rounded-lg p-6 shadow-md">
+          <div class="flex items-center space-x-4 mb-2">
+            <img
+              src="bandeirante.png"
+              alt="Logo Bandeirante Supermercados Brasil"
+              class="h-8 w-auto rounded-full"
+            />
+            <h4 class="text-xl font-semibold">Analista de Sistemas</h4>
+          </div>
+          <p class="text-muted-foreground">
+            Bandeirante Supermercados Brasil • 12/2018 - 12/2022
+          </p>
+          <ul
+            class="mt-4 space-y-2 list-disc list-inside text-muted-foreground"
+          >
+            <li>
+              Realizei manutenção e aprimoramento do site da empresa, garantindo
+              seu funcionamento e aplicando correções e melhorias
+            </li>
+            <li>
+              Ofereci suporte técnico ao ERP, configuração de PDVs e ajustes em
+              sistemas de telefonia e CFTV
+            </li>
+            <li>
+              Estruturei e otimizei processos de automação, incluindo a
+              configuração de balanças e a manutenção de relatórios
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-card rounded-lg p-6 shadow-md">
+          <div class="flex items-center space-x-4 mb-2">
+            <img
+              src="preparacursos.png"
+              alt="Logo Prepara Cursos"
+              class="h-8 w-auto rounded-full"
+            />
+            <h4 class="text-xl font-semibold">
+              Estágio Educador de Cursos Profissionalizantes
+            </h4>
+          </div>
+          <p class="text-muted-foreground">
+            Prepara Cursos Profissionalizantes Birigui • 03/2016 - 05/2017
+          </p>
+          <ul
+            class="mt-4 space-y-2 list-disc list-inside text-muted-foreground"
+          >
+            <li>
+              Ministração de aulas e suporte a alunos em informática básica,
+              garantindo um aprendizado claro e acessível
+            </li>
+            <li>
+              Participação em reuniões com a gestão, contribuindo com sugestões
+              para aprimorar a dinâmica das aulas e o material didático
+            </li>
+            <li>
+              Desenvolvimento de habilidades de comunicação, organização e
+              trabalho em equipe no ambiente educacional
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="mb-16">
+      <div class="flex items-center gap-2 mb-8">
+        <GraduationCap className="h-6 w-6 text-primary" />
+        <h3 class="text-2xl font-semibold">Formação Acadêmica</h3>
+      </div>
+
+      <div class="space-y-8">
+        <div class="bg-card rounded-lg p-6 shadow-md">
+          <div class="flex items-center space-x-4 mb-2">
+            <img
+              src="descomplica.png"
+              alt="Uni América / Descomplica Faculdade Online"
+              class="w-12 h-12 rounded-md"
+            />
+            <h4 class="text-xl font-semibold">
+              Pós-graduação em Engenharia de Software
+            </h4>
+          </div>
+          <p class="text-muted-foreground">
+            Uni América / Descomplica Faculdade Online • 02/2024 - 07/2024
+          </p>
+          <p class="text-muted-foreground">
+            Especialista em Engenharia de Software e Arquitetura de Sistemas em
+            Nuvem
+          </p>
+        </div>
+
+        <div class="bg-card rounded-lg p-6 shadow-md">
+          <div class="flex items-center space-x-4 mb-2">
+            <img
+              src="ifsp.png"
+              alt="Instituto Federal de Educação, Ciência e Tecnologia de São Paulo"
+              class="w-12 h-12 rounded-md"
+            />
+            <h4 class="text-xl font-semibold">
+              Ensino Superior, Tecnologia em Sistemas para Internet
+            </h4>
+          </div>
+          <p class="text-muted-foreground">
+            Instituto Federal de Educação, Ciência e Tecnologia de São Paulo •
+            02/2018 - 12/2022
+          </p>
+          <p class="text-muted-foreground">
+            Especializado em Engenharia de Software e Sistemas Distribuídos
+          </p>
+        </div>
+
+        <div class="bg-card rounded-lg p-6 shadow-md">
+          <div class="flex items-center space-x-4 mb-2">
+            <img
+              src="ifsp.png"
+              alt="Instituto Federal de Educação, Ciência e Tecnologia de São Paulo"
+              class="w-12 h-12 rounded-md"
+            />
+            <h4 class="text-xl font-semibold">
+              Ensino Técnico, Manutenção e Suporte em informática
+            </h4>
+          </div>
+          <p class="text-muted-foreground">
+            Instituto Federal de Educação, Ciência e Tecnologia de São Paulo •
+            07/2016 - 07/2018
+          </p>
+          <p class="text-muted-foreground">
+            Especializado em Manutenção de Computadores e Sistemas Web
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificações -->
+    <div>
+      <div class="flex items-center gap-2 mb-8">
+        <Award className="h-6 w-6 text-primary" />
+        <h3 class="text-2xl font-semibold">Certificações</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div
+          class="bg-card rounded-lg p-6 shadow-md transition-transform transform hover:scale-105 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <h4 class="text-xl font-semibold">Curso de PHP 7 Completo</h4>
+          <p class="text-muted-foreground">HCode • 2025</p>
+        </div>
+
+        <div
+          class="bg-card rounded-lg p-6 shadow-md transition-transform transform hover:scale-105 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <h4 class="text-xl font-semibold">Bootstrap 4</h4>
+          <p class="text-muted-foreground">HCode • 2022</p>
+        </div>
+
+        <div
+          class="bg-card rounded-lg p-6 shadow-md transition-transform transform hover:scale-105 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <h4 class="text-xl font-semibold">Java Completo</h4>
+          <p class="text-muted-foreground">Nelio Alves • 2023</p>
+        </div>
+
+        <div
+          class="bg-card rounded-lg p-6 shadow-md transition-transform transform hover:scale-105 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <h4 class="text-xl font-semibold">React do Zero a Maestria</h4>
+          <p class="text-muted-foreground">Matheus Battisti • 2024</p>
+        </div>
+
+        <div
+          class="bg-card rounded-lg p-6 shadow-md transition-transform transform hover:scale-105 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <h4 class="text-xl font-semibold">Node do Zero a Maestria</h4>
+          <p class="text-muted-foreground">Matheus Battisti • 2025</p>
+        </div>
+
+        <div
+          class="bg-card rounded-lg p-6 shadow-md transition-transform transform hover:scale-105 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <h4 class="text-xl font-semibold">Spring Boot + React</h4>
+          <p class="text-muted-foreground">Dougllas Sousa • 2025</p>
+        </div>
+
+        <div
+          class="bg-card rounded-lg p-6 shadow-md transition-transform transform hover:scale-105 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <h4 class="text-xl font-semibold">Laravel + VueJS</h4>
+          <p class="text-muted-foreground">Jorge Sant • 2025</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
