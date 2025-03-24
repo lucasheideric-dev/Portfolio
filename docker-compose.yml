@@ -1,14 +1,19 @@
-version: '3'
+version: "3"
 services:
   portfolio:
     build: .
     image: portfolio:latest
-    command: npm run preview -- --port 4321 --host 0.0.0.0  # Adicionando o parâmetro --host
+    command: npm run preview -- --port 4321 --host 0.0.0.0
     ports:
       - "8080:4321"
     restart: always
     networks:
       - app-network
+    volumes:
+      - .:/app
+      - /app/node_modules # Evita que o volume sobrescreva as dependências
+    environment:
+      - NODE_ENV=production # Evita que o Astro rode desnecessariamente em modo dev
 
   nginx:
     image: nginx:latest

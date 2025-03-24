@@ -1,32 +1,34 @@
-# Usar a imagem do Node.js
+# Etapa 1: Construção
+FROM node:18 AS builder
+
+# Criar diretório de trabalho
+WORKDIR /app
+
+# Copiar apenas os arquivos essenciais primeiro para aproveitar o cache
+COPY package.json package-lock.json ./
+
+# Instalar apenas dependências
+RUN npm install --frozen-lockfile
+
+# Copiar o restante do código após instalar dependências
+COPY . .
+
+# Rodar o build
+RUN npm run build
+
+# Etapa 2: Produção (Imagem final mais leve)
 FROM node:18
 
 # Criar diretório de trabalho
 WORKDIR /app
 
-# Copiar os arquivos de dependências para dentro do contêiner
-COPY package.json package-lock.json ./
+# Copiar apenas os arquivos necessários do estágio de build
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./
 
-# Instalar o Astro globalmente
-RUN npm install -g astro
-
-# Instalar dependências do projeto
-RUN npm install
-
-# Copiar os outros arquivos do projeto para dentro do contêiner
-COPY . .
-
-# Garantir que o Astro tenha permissão de execução
-RUN chmod +x /usr/local/bin/astro
-
-# Verificar se o Astro foi instalado corretamente
-RUN astro --version
-
-# Rodar o comando de build
-RUN npm run build
-
-# Expor a porta do Astro
+# Expor a porta
 EXPOSE 4321
 
-# Comando para rodar o servidor Astro
+# Rodar o servidor Astro
 CMD ["npm", "run", "preview"]
