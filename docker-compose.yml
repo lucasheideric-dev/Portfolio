@@ -1,31 +1,28 @@
-version: "3"
+version: "3.3"
+
 services:
   portfolio:
     build: .
-    image: portfolio:latest
-    command: npm run preview -- --port 4321 --host 0.0.0.0
-    ports:
-      - "8080:4321"
+    container_name: portfolio
     restart: always
+    ports:
+      - "4322:4321"  # Alterando a porta externa para 4322
     networks:
-      - app-network
-    volumes:
-      - .:/app
-      - /app/node_modules # Evita que o volume sobrescreva as dependências
-    environment:
-      - NODE_ENV=production # Evita que o Astro rode desnecessariamente em modo dev
+      - app_network
 
   nginx:
     image: nginx:latest
+    container_name: nginx
+    restart: always
     ports:
       - "80:80"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
       - portfolio
     networks:
-      - app-network
+      - app_network
 
 networks:
-  app-network:
+  app_network:
     driver: bridge
