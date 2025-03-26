@@ -20,7 +20,7 @@ const projects = [
       "CakePHP",
       "jQuery",
       "Bootstrap",
-      "Oracle Cloud",
+      "Oracle",
       "MySQL",
       "Java",
       "React.js",
@@ -28,6 +28,8 @@ const projects = [
       "Nginx",
       "GitHub",
     ],
+    github: "",
+    link: "https://countpay.com.br/",
   },
   {
     title: "Cardápio Mobile",
@@ -44,6 +46,8 @@ const projects = [
       "Vercel",
       "GitHub",
     ],
+    github: "https://github.com/lucasheideric-dev/FastFood-App",
+    link: "https://fast-food-app-opal.vercel.app/foodfly",
   },
   {
     title: "Fortmix Atacado",
@@ -61,6 +65,8 @@ const projects = [
       "Nginx",
       "GitHub",
     ],
+    github: "",
+    link: "https://fortmixatacado.com.br/",
   },
   {
     title: "Ollé Sports",
@@ -77,6 +83,8 @@ const projects = [
       "Nginx",
       "GitHub",
     ],
+    github: "https://github.com/lucasheideric-dev/Olle-Sports",
+    link: "",
   },
   {
     title: "Poupe Agora",
@@ -92,6 +100,8 @@ const projects = [
       "jQuery",
       "GitHub",
     ],
+    github: "",
+    link: "https://poupeagora.com.br/",
   },
 ];
 
@@ -102,31 +112,32 @@ export function ProjectCarousel() {
         align: "start",
         loop: true,
       }}
-      className="w-full max-w-7xl mx-auto"
+      className="w-full max-w-7xl mx-auto px-4"
     >
       <CarouselContent>
         {projects.map((project, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+          <CarouselItem
+            key={index}
+            className="basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/2 xl:basis-1/3 px-2"
+          >
             <div className="p-1">
-              <Card className="overflow-hidden h-[500px]">
-                {" "}
-                {/* Ajuste a altura conforme necessário */}
-                <CardContent className="p-0 h-full flex flex-col">
-                  <a href="#" target="_blank">
+              <Card className="overflow-hidden h-auto">
+                <CardContent className="p-0 flex flex-col h-full">
+                  <div>
                     <div className="relative group">
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                        className="w-full h-40 sm:h-48 md:h-56 object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
-                  </a>
+                  </div>
 
-                  <div className="mt-2.5 p-6 pb-0 flex-grow">
-                    <h3 className="text-xl font-semibold mb-2">
+                  <div className="p-4 flex-grow">
+                    <h3 className="text-lg font-semibold mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm mb-4">
+                    <p className="text-sm text-muted-foreground mb-4">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -141,13 +152,48 @@ export function ProjectCarousel() {
                     </div>
                   </div>
 
-                  <div className="w-full flex justify-center items-center p-4 gap-2">
-                    <Button variant={"default"}>
-                      <Code /> Ver Código
-                    </Button>
-                    <Button variant={"outline"}>
-                      <ExternalLink /> Ver Página
-                    </Button>
+                  <div className="w-full flex flex-wrap justify-center items-center p-4 gap-2">
+                    <div className="w-full flex flex-wrap justify-center items-center p-4 gap-2">
+                      <div className="w-full flex flex-wrap justify-center items-center p-4 gap-2">
+                        <a
+                          href={project.github ? project.github : "#"}
+                          target={project.github ? "_blank" : "_self"}
+                          rel="noopener noreferrer"
+                          onClick={(e) => {
+                            if (!project.github) {
+                              e.preventDefault();
+                              alert("Código deste projeto é reservado.");
+                            }
+                          }}
+                        >
+                          <Button
+                            variant={"default"}
+                            className="w-full cursor-pointer sm:w-auto"
+                          >
+                            <Code /> Ver Código
+                          </Button>
+                        </a>
+
+                        <a
+                          href={project.link ? project.link : "#"}
+                          target={project.link ? "_blank" : "_self"}
+                          rel="noopener noreferrer"
+                          onClick={(e) => {
+                            if (!project.link) {
+                              e.preventDefault();
+                              alert("Página indisponível para este projeto!");
+                            }
+                          }}
+                        >
+                          <Button
+                            variant={"outline"}
+                            className="w-full cursor-pointer sm:w-auto"
+                          >
+                            <ExternalLink /> Ver Página
+                          </Button>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -156,8 +202,8 @@ export function ProjectCarousel() {
         ))}
       </CarouselContent>
 
-      <CarouselPrevious className="hidden md:flex" />
-      <CarouselNext className="hidden md:flex" />
+      <CarouselPrevious className="hidden md:flex sm:flex" />
+      <CarouselNext className="hidden md:flex sm:flex" />
     </Carousel>
   );
 }
