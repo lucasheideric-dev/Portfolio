@@ -13,6 +13,7 @@ Bem-vindo ao meu portfólio desenvolvido com **AstroJS**, **TypeScript** e **Tai
 ├── public/                # Arquivos públicos e estáticos
 │   └── favicon.svg
 ├── src/
+│   ├── assets/            # itens reutilizáveis
 │   ├── components/        # Componentes reutilizáveis
 │   ├── layouts/           # Layout base do site
 │   ├── pages/             # Páginas do portfólio
