@@ -27,8 +27,6 @@ Bem-vindo ao meu portfólio desenvolvido com **AstroJS**, **TypeScript** e **Tai
 
 ## 🧭 Seções do Portfólio
 
----
-
 ### 💼 Jornada Profissional
 ![Jornada Profissional](https://i.imgur.com/LFycaJm.png)  
 Detalho aqui minha trajetória no mercado de trabalho, minhas experiências e aprendizados.
